@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd 
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+
+<!--配置shiro的filter  -->
+<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+	<property name="securityManager" ref="securityManager"></property>
+	<property name="loginUrl" value="/login"></property>
+	<property name="successUrl" value="/success"></property>
+	<property name="unauthorizedUrl" value="/refuse.html"></property>
+	<!-- 自定义filter配置 -->
+		 <property name="filters">
+			<map> 
+				<!-- 将自定义 的FormAuthenticationFilter注入shiroFilter中-->
+				<entry key="authc" value-ref="formAuthenticationFilter" />
+			</map>
+		</property>
+	<property name="filterChainDefinitions">
+		<value>
+		  <!-- 对静态资源设置匿名访问 -->
+             <!--  /images/** = anon
+              /js/** = anon
+              /styles/** = anon -->
+             <!-- 可匿名访问路径，例如：验证码、登录连接、退出连接等 -->
+              <!-- /login = anon -->
+               <!-- 剩余其他路径，必须认证通过才可以访问 -->
+             <!--  /** = authc -->
+               <!-- 所有的静态资源要匿名访问 -->
+			    /bootstrap/**=anon
+			    /bootstrap-table-master/**=anon
+			    /css/**=anon
+			    /js/**=anon
+			    /static/**=anon
+			   <!--  /login=anon -->
+			    /verification=anon
+			    /apply_baoxiao.jsp=perms[baoxiao:apply]
+			    /myBaoxiaoBill=perms[baoxiao:billquery]
+			    /myTaskList=perms[baoxiao:tasklist]
+			    /add_process.jsp=perms[baoxiao:publish]
+			    /processDefinitionList=perms[baoxiao:processlist]
+			    /findUserList=perms[user:query]
+			    /toAddRole=perms[user:create]
+			    <!-- 退出系统 -->
+			    /logout=logout
+				/**=authc
+		</value>
+	</property>
+</bean>
+
+
+
+<!-- 配置SercuityManager -->
+<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+	<property name="realm" ref="customerRealm"></property>
+</bean>
+<!-- <bean id="sessionIdCookie" class="org.apache.shiro.web.servlet.SimpleCookie">
+    <constructor-arg value="sid"/>
+    <property name="httpOnly" value="true"/>
+    <property name="maxAge" value="-1"/>
+</bean> -->
+
+<bean id="hashedCredentialsMatcher" class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+	<property name="hashAlgorithmName" value="md5"></property>
+	<property name="hashIterations" value="2"></property>
+	<!-- <property name="storedCredentialsHexEncoded" value="true"/> -->
+</bean>
+<!-- 配置自定义realm -->
+<bean id="customerRealm" class="com.gec.realm.CustomerRealm">
+	<property name="credentialsMatcher" ref="hashedCredentialsMatcher"></property>
+</bean>
+
+<bean id="formAuthenticationFilter" class="com.gec.realm.CustomFormAuthenticationFilter">
+		<!-- 表单中账号的input名称 -->
+		<property name="usernameParam" value="username" />
+		<!-- 表单中密码的input名称 -->
+		<property name="passwordParam" value="password" />
+   </bean> 
+</beans>

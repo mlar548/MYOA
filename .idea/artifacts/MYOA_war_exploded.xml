@@ -1,0 +1,90 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="MYOA:war exploded">
+    <output-path>$PROJECT_DIR$/classes/artifacts/MYOA_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="MYOA" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="activiti-bpmn-converter-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-bpmn-layout-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-bpmn-model-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-camel-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-cdi.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-common-rest-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-cxf-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-diagram-rest-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-engine-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-explorer-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-json-converter-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-modeler-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-mule-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-osgi-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-rest-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-simple-workflow-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="activiti-spring-5.13.jar" module-name="MYOA" />
+          <element id="library" level="module" name="aopalliance-1.0.jar" module-name="MYOA" />
+          <element id="library" level="module" name="aspectjweaver-1.8.4.jar" module-name="MYOA" />
+          <element id="library" level="module" name="classmate-1.1.0.jar" module-name="MYOA" />
+          <element id="library" level="module" name="commons-beanutils-1.8.3.jar" module-name="MYOA" />
+          <element id="library" level="module" name="commons-codec-1.6.jar" module-name="MYOA" />
+          <element id="library" level="module" name="commons-dbcp-1.2.2.jar" module-name="MYOA" />
+          <element id="library" level="module" name="commons-fileupload-1.3.1.jar" module-name="MYOA" />
+          <element id="library" level="module" name="commons-io-1.3.2.jar" module-name="MYOA" />
+          <element id="library" level="module" name="commons-lang-2.4.jar" module-name="MYOA" />
+          <element id="library" level="module" name="commons-lang3-3.3.2.jar" module-name="MYOA" />
+          <element id="library" level="module" name="commons-logging-1.1.1.jar" module-name="MYOA" />
+          <element id="library" level="module" name="commons-logging-1.1.3.jar" module-name="MYOA" />
+          <element id="library" level="module" name="commons-net-3.3.jar" module-name="MYOA" />
+          <element id="library" level="module" name="commons-pool-1.3.jar" module-name="MYOA" />
+          <element id="library" level="module" name="ehcache-core-2.5.0.jar" module-name="MYOA" />
+          <element id="library" level="module" name="hibernate-validator-5.2.2.Final.jar" module-name="MYOA" />
+          <element id="library" level="module" name="httpclient-4.3.5.jar" module-name="MYOA" />
+          <element id="library" level="module" name="httpcore-4.3.2.jar" module-name="MYOA" />
+          <element id="library" level="module" name="jackson-annotations-2.4.0.jar" module-name="MYOA" />
+          <element id="library" level="module" name="jackson-core-2.4.2.jar" module-name="MYOA" />
+          <element id="library" level="module" name="jackson-databind-2.4.2.jar" module-name="MYOA" />
+          <element id="library" level="module" name="jboss-logging-3.1.0.CR2.jar" module-name="MYOA" />
+          <element id="library" level="module" name="joda-time-2.5.jar" module-name="MYOA" />
+          <element id="library" level="module" name="jsqlparser-0.9.5.jar" module-name="MYOA" />
+          <element id="library" level="module" name="jstl-1.2.jar" module-name="MYOA" />
+          <element id="library" level="module" name="junit-4.9.jar" module-name="MYOA" />
+          <element id="library" level="module" name="log4j-1.2.16.jar" module-name="MYOA" />
+          <element id="library" level="module" name="log4j-1.2.17.jar" module-name="MYOA" />
+          <element id="library" level="module" name="mybatis-3.2.8.jar" module-name="MYOA" />
+          <element id="library" level="module" name="mybatis-paginator-1.2.15.jar" module-name="MYOA" />
+          <element id="library" level="module" name="mybatis-spring-1.2.2.jar" module-name="MYOA" />
+          <element id="library" level="module" name="mysql-connector-java-5.1.43.jar" module-name="MYOA" />
+          <element id="library" level="module" name="ojdbc6-11.1.0.7.0.jar" module-name="MYOA" />
+          <element id="library" level="module" name="pagehelper-4.2.1.jar" module-name="MYOA" />
+          <element id="library" level="module" name="quartz-1.6.1.jar" module-name="MYOA" />
+          <element id="library" level="module" name="shiro-core-1.2.3.jar" module-name="MYOA" />
+          <element id="library" level="module" name="shiro-ehcache-1.2.3.jar" module-name="MYOA" />
+          <element id="library" level="module" name="shiro-quartz-1.2.3.jar" module-name="MYOA" />
+          <element id="library" level="module" name="shiro-spring-1.2.3.jar" module-name="MYOA" />
+          <element id="library" level="module" name="shiro-web-1.2.3.jar" module-name="MYOA" />
+          <element id="library" level="module" name="slf4j-api-1.6.4.jar" module-name="MYOA" />
+          <element id="library" level="module" name="slf4j-api-1.7.5.jar" module-name="MYOA" />
+          <element id="library" level="module" name="slf4j-log4j12-1.6.4.jar" module-name="MYOA" />
+          <element id="library" level="module" name="slf4j-log4j12-1.7.5.jar" module-name="MYOA" />
+          <element id="library" level="module" name="spring-aop-4.1.3.RELEASE.jar" module-name="MYOA" />
+          <element id="library" level="module" name="spring-aspects-4.1.3.RELEASE.jar" module-name="MYOA" />
+          <element id="library" level="module" name="spring-beans-4.1.3.RELEASE.jar" module-name="MYOA" />
+          <element id="library" level="module" name="spring-context-4.1.3.RELEASE.jar" module-name="MYOA" />
+          <element id="library" level="module" name="spring-core-4.1.3.RELEASE.jar" module-name="MYOA" />
+          <element id="library" level="module" name="spring-expression-4.1.3.RELEASE.jar" module-name="MYOA" />
+          <element id="library" level="module" name="spring-jdbc-4.1.3.RELEASE.jar" module-name="MYOA" />
+          <element id="library" level="module" name="spring-test-4.1.3.RELEASE.jar" module-name="MYOA" />
+          <element id="library" level="module" name="spring-tx-4.1.3.RELEASE.jar" module-name="MYOA" />
+          <element id="library" level="module" name="spring-web-4.1.3.RELEASE.jar" module-name="MYOA" />
+          <element id="library" level="module" name="spring-webmvc-4.1.3.RELEASE.jar" module-name="MYOA" />
+          <element id="library" level="module" name="validation-api-1.1.0.Final.jar" module-name="MYOA" />
+          <element id="library" level="module" name="hutool-all-4.6.7.jar" module-name="MYOA" />
+          <element id="library" level="project" name="lib" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="MYOA/web/Web" />
+    </root>
+  </artifact>
+</component>
